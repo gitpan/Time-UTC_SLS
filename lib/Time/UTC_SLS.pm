@@ -9,7 +9,13 @@ Time::UTC_SLS - UTC with Smoothed Leap Seconds
 	$mjd = utc_to_utcsls($day, $secs);
 	($day, $secs) = utcsls_to_day($mjd);
 
-	use Time::UTC_SLS qw(utc_day_to_cjdn utc_cjdn_to_day);
+	use Time::UTC_SLS qw(
+		utc_day_to_mjdn utc_mjdn_to_day
+		utc_day_to_cjdn utc_cjdn_to_day
+	);
+
+	$mjdn = utc_day_to_mjdn($day);
+	$day = utc_mjdn_to_day($mjdn);
 
 	$cjdn = utc_day_to_cjdn($day);
 	$day = utc_cjdn_to_day($cjdn);
@@ -64,13 +70,18 @@ use strict;
 
 use Carp qw(croak);
 use Math::BigRat 0.04;
-use Time::UTC 0.001 qw(utc_day_seconds utc_day_to_cjdn utc_cjdn_to_day);
+use Time::UTC 0.003 qw(
+	utc_day_seconds
+	utc_day_to_mjdn utc_mjdn_to_day
+	utc_day_to_cjdn utc_cjdn_to_day
+);
 
-our $VERSION = "0.000";
+our $VERSION = "0.001";
 
 use base qw(Exporter);
 our @EXPORT_OK = qw(
 	utc_to_utcsls utcsls_to_utc
+	utc_day_to_mjdn utc_mjdn_to_day
 	utc_day_to_cjdn utc_cjdn_to_day
 );
 
@@ -108,7 +119,7 @@ sub utc_to_utcsls($$) {
 				if $secs > $slew_from;
 		}
 	}
-	return TAI_EPOCH_MJD + $day + $secs/86400;
+	return utc_day_to_mjdn($day) + $secs/86400;
 }
 
 =item utcsls_to_utc(MJD)
@@ -142,6 +153,22 @@ sub utcsls_to_utc($) {
 	return ($day, $secs);
 }
 
+=item utc_day_to_mjdn(DAY)
+
+Takes a day number (days since the TAI epoch), as a C<Math::BigRat>
+object, and returns the corresponding Modified Julian Day Number
+(a number of days since 1858-11-17 UT), as a C<Math::BigRat> object.
+MJDN is a standard numbering for days in Universal Time.  There is no
+bound on the permissible day numbers; the function is not limited to
+days for which UTC-SLS is defined.
+
+=item utc_mjdn_to_day(MJDN)
+
+This performs the reverse of the translation that C<utc_day_to_mjdn> does.
+It takes a Modified Julian Day Number, as a C<Math::BigRat> object,
+and returns the number of days since the TAI epoch, as a C<Math::BigRat>
+object.  It does not impose any limit on the range.
+
 =item utc_day_to_cjdn(DAY)
 
 Takes a day number (days since the TAI epoch), as a C<Math::BigRat>
@@ -173,7 +200,7 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2006 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2006, 2007 Andrew Main (Zefram) <zefram@fysh.org>
 
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

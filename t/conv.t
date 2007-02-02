@@ -2,14 +2,36 @@ use Test::More tests => 1 + 2*18 + 9;
 
 BEGIN { use_ok "Time::UTC_SLS", qw(utc_to_utcsls utcsls_to_utc); }
 
-use Math::BigRat;
+use Math::BigRat 0.04;
 
 sub br { Math::BigRat->new(@_) }
 
+sub match_val($$) {
+	my($a, $b) = @_;
+	ok ref($a) eq ref($b) && $a == $b;
+}
+
+sub match_vec($$) {
+	my($a, $b) = @_;
+	unless(@$a == @$b) {
+		ok 0;
+		return;
+	}
+	for(my $i = 0; $i != @$a; $i++) {
+		my $aval = $a->[$i];
+		my $bval = $b->[$i];
+		unless(ref($aval) eq ref($bval) && $aval == $bval) {
+			ok 0;
+			return;
+		}
+	}
+	ok 1;
+}
+
 sub check($$$) {
 	my($day, $secs, $mjd) = map { br($_) } @_;
-	is utc_to_utcsls($day, $secs), $mjd;
-	is_deeply [ utcsls_to_utc($mjd) ], [ $day, $secs ];
+	match_val utc_to_utcsls($day, $secs), $mjd;
+	match_vec [ utcsls_to_utc($mjd) ], [ $day, $secs ];
 }
 
 check(5113,     0, "41317");
