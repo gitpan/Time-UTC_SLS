@@ -63,13 +63,13 @@ eval { utc_to_utcsls(br(5112), br(86500)); };
 like $@, qr/\Aday 5112 precedes the start of UTC-SLS /;
 
 eval { utc_to_utcsls(br(5115), br(-1)); };
-like $@, qr/\A\S+ seconds is out of range for a 86400 second day /;
+like $@, qr/\A[^\t\n\f\r ]+ seconds is out of range for a 86400 second day /;
 eval { utc_to_utcsls(br(5115), br(86400)); };
-like $@, qr/\A\S+ seconds is out of range for a 86400 second day /;
+like $@, qr/\A[^\t\n\f\r ]+ seconds is out of range for a 86400 second day /;
 eval { utc_to_utcsls(br(5294), br(-1)); };
-like $@, qr/\A\S+ seconds is out of range for a 86401 second day /;
+like $@, qr/\A[^\t\n\f\r ]+ seconds is out of range for a 86401 second day /;
 eval { utc_to_utcsls(br(5294), br(86401)); };
-like $@, qr/\A\S+ seconds is out of range for a 86401 second day /;
+like $@, qr/\A[^\t\n\f\r ]+ seconds is out of range for a 86401 second day /;
 
 eval { utcsls_to_utc(br("41316.5")); };
 like $@, qr/\Aday 5112 precedes the start of UTC-SLS /;

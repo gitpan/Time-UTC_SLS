@@ -1,12 +1,36 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Time-UTC_SLS
-version:      0.001
-version_from: lib/Time/UTC_SLS.pm
-installdirs:  site
+---
+name: Time-UTC_SLS
+version: 0.002
+author:
+  - 'Andrew Main (Zefram) <zefram@fysh.org>'
+abstract: UTC with Smoothed Leap Seconds
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
 requires:
-    Math::BigRat:                  0.04
-    Time::UTC:                     0.003
-
+  Carp: 0
+  Exporter: 0
+  Math::BigRat: 0.04
+  Time::UTC: 0.005
+  constant: 0
+  parent: 0
+  perl: 5.006
+  strict: 0
+  warnings: 0
+build_requires:
+  Math::BigRat: 0.04
+  Module::Build: 0
+  Test::More: 0
+  perl: 5.006
+  strict: 0
+  warnings: 0
+dynamic_config: 0
+provides:
+  Time::UTC_SLS:
+    file: lib/Time/UTC_SLS.pm
+    version: 0.002
+generated_by: Module::Build version 0.31012
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
 distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.17

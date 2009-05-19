@@ -70,15 +70,15 @@ use strict;
 
 use Carp qw(croak);
 use Math::BigRat 0.04;
-use Time::UTC 0.003 qw(
+use Time::UTC 0.005 qw(
 	utc_day_seconds
 	utc_day_to_mjdn utc_mjdn_to_day
 	utc_day_to_cjdn utc_cjdn_to_day
 );
 
-our $VERSION = "0.001";
+our $VERSION = "0.002";
 
-use base qw(Exporter);
+use parent "Exporter";
 our @EXPORT_OK = qw(
 	utc_to_utcsls utcsls_to_utc
 	utc_day_to_mjdn utc_mjdn_to_day
@@ -200,7 +200,9 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2006, 2007 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2006, 2007, 2009 Andrew Main (Zefram) <zefram@fysh.org>
+
+=head1 LICENSE
 
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
