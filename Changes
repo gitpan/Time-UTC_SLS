@@ -1,3 +1,15 @@
+version 0.003; 2010-09-01
+
+  * check for required Perl version at runtime
+
+  * use full stricture in test suite
+
+  * in Build.PL, explicitly declare configure-time requirements
+
+  * remove bogus "exit 0" from Build.PL
+
+  * add MYMETA.yml to .cvsignore
+
 version 0.002; 2009-05-19
 
   * bugfix: require bugfixed version of Time::UTC (for $SIG{__DIE__}

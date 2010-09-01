@@ -1,3 +1,4 @@
+{ use 5.006; }
 use warnings;
 use strict;
 
@@ -6,6 +7,12 @@ use Module::Build;
 Module::Build->new(
 	module_name => "Time::UTC_SLS",
 	license => "perl",
+	configure_requires => {
+		"Module::Build" => 0,
+		"perl" => "5.006",
+		"strict" => 0,
+		"warnings" => 0,
+	},
 	build_requires => {
 		"Math::BigRat" => "0.04",
 		"Module::Build" => 0,
@@ -31,4 +38,4 @@ Module::Build->new(
 	sign => 1,
 )->create_build_script;
 
-exit 0;
+1;

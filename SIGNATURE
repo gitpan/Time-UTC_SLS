@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.55.
+signed via the Module::Signature module, version 0.64.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,23 +14,23 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 81bac617ea750ee6013f08193113571eeb6404b0 .cvsignore
-SHA1 488785c47f7f338f65717ea05234f479082faf81 Build.PL
-SHA1 6331181d831f79a86526d7691f065b9004b03d37 Changes
+SHA1 87d723c9607dd5ee8cabb7aecb51d489aa04a71b .cvsignore
+SHA1 550f71f0e5e759b204d54c511249e97e5cd80203 Build.PL
+SHA1 079737949c2704c0296e7bb521fc3aef347c0103 Changes
 SHA1 7f379a3135894d2c81aa29151f5191c2e52d6e1a MANIFEST
-SHA1 ac2f6a49d8f05cabcda5e6b559d4ebe3d6d37879 META.yml
-SHA1 f39315b8e83202006e8a916c6a58725d104f75ec Makefile.PL
-SHA1 4004fc1170f1cdd147e5878ebbff5dac76c2a741 README
-SHA1 dd2e40fbda519ee9edfc82a510af1b96dc9ece24 lib/Time/UTC_SLS.pm
-SHA1 49e9d4dbccf01d18add6799b9eeb073d53d853e7 t/cjdn.t
-SHA1 980026790e17abafcebd7d3d84da11d24c31d601 t/conv.t
-SHA1 924cfcf76e7b4903f587823bc0541cdccc1081bc t/mjdn.t
-SHA1 0e141eecf3ca4903ef38d9413b5403a9ddb0392f t/pod_cvg.t
-SHA1 74a957cd8b93f25672ecc6aa578a671d084dd343 t/pod_syn.t
+SHA1 18d82f76b435eda04726d78ee2433b6940ea404f META.yml
+SHA1 caae608231ffe78390c76451ade51a7cfc87a9f9 Makefile.PL
+SHA1 364a9a669c374835e3e3f413580f3131757b9409 README
+SHA1 7324894bf714c1422bb889ee819a715f6c8153d9 lib/Time/UTC_SLS.pm
+SHA1 922e97f50efc2710f20c54156ac2565b8c5108ff t/cjdn.t
+SHA1 2e265d087c9e06ab4e3a3620821af67388fb967b t/conv.t
+SHA1 dbea070e47057fa312575466fec1d918355e8dd4 t/mjdn.t
+SHA1 904d9a4f76525e2303e4b0c168c68230f223c8de t/pod_cvg.t
+SHA1 65c75abdef6f01a5d1588a307f2ddfe2333dc961 t/pod_syn.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.9 (GNU/Linux)
 
-iEYEARECAAYFAkoTIb4ACgkQOV9mt2VyAVFoHACfYqBDYC0FAYx4DHyHyT19OGt9
-Bg8An3FQFRNfScqdUtbnxzoYd+svuKDp
-=k7W0
+iEYEARECAAYFAkx+zy4ACgkQOV9mt2VyAVG2iwCggoTEk3h/q5Nc9eL4Ds9gzAnj
+KOAAmgNLYbtTDIzjzugC5iMr0TYoMHKk
+=j6Pr
 -----END PGP SIGNATURE-----

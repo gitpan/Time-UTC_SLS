@@ -65,6 +65,7 @@ likewise C<Math::BigRat>s.
 
 package Time::UTC_SLS;
 
+{ use 5.006; }
 use warnings;
 use strict;
 
@@ -76,7 +77,7 @@ use Time::UTC 0.005 qw(
 	utc_day_to_cjdn utc_cjdn_to_day
 );
 
-our $VERSION = "0.002";
+our $VERSION = "0.003";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(
@@ -200,7 +201,8 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2006, 2007, 2009 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2006, 2007, 2009, 2010
+Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 LICENSE
 

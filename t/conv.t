@@ -1,3 +1,6 @@
+use warnings;
+use strict;
+
 use Test::More tests => 1 + 2*18 + 9;
 
 BEGIN { use_ok "Time::UTC_SLS", qw(utc_to_utcsls utcsls_to_utc); }
@@ -73,3 +76,5 @@ like $@, qr/\A[^\t\n\f\r ]+ seconds is out of range for a 86401 second day /;
 
 eval { utcsls_to_utc(br("41316.5")); };
 like $@, qr/\Aday 5112 precedes the start of UTC-SLS /;
+
+1;
