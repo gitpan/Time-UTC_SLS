@@ -25,7 +25,7 @@ Module::Build->new(
 		"Carp" => 0,
 		"Exporter" => 0,
 		"Math::BigRat" => "0.04",
-		"Time::UTC" => "0.005",
+		"Time::UTC" => "0.007",
 		"constant" => 0,
 		"parent" => 0,
 		"perl" => "5.006",

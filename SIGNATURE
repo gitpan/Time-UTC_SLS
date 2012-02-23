@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.64.
+signed via the Module::Signature module, version 0.68.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,23 +14,24 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 87d723c9607dd5ee8cabb7aecb51d489aa04a71b .cvsignore
-SHA1 550f71f0e5e759b204d54c511249e97e5cd80203 Build.PL
-SHA1 079737949c2704c0296e7bb521fc3aef347c0103 Changes
-SHA1 7f379a3135894d2c81aa29151f5191c2e52d6e1a MANIFEST
-SHA1 18d82f76b435eda04726d78ee2433b6940ea404f META.yml
-SHA1 caae608231ffe78390c76451ade51a7cfc87a9f9 Makefile.PL
-SHA1 364a9a669c374835e3e3f413580f3131757b9409 README
-SHA1 7324894bf714c1422bb889ee819a715f6c8153d9 lib/Time/UTC_SLS.pm
+SHA1 68ce0021acca9535d50d2725d386c0da6666be40 .gitignore
+SHA1 7105fd20675a404a28e65795f42561784922fab2 Build.PL
+SHA1 da84ee63bccf9eea4dc33ae15789c8e96e3460a4 Changes
+SHA1 17eea20b31c7cde33460c9185c8af4ec18648202 MANIFEST
+SHA1 48e6a467bcba6b7c706b185081d3d511187308b0 META.json
+SHA1 14a976a9c67c7e0ab93210a57b8f465477c14b16 META.yml
+SHA1 a4df8e97ccd390a42212af5a9f4d0986c85e7a5f Makefile.PL
+SHA1 499fcfceb60b577c42e8e2ba76bcaebcdaddb2ad README
+SHA1 8e87b23673adf39647badb8234360179425cfe27 lib/Time/UTC_SLS.pm
 SHA1 922e97f50efc2710f20c54156ac2565b8c5108ff t/cjdn.t
 SHA1 2e265d087c9e06ab4e3a3620821af67388fb967b t/conv.t
 SHA1 dbea070e47057fa312575466fec1d918355e8dd4 t/mjdn.t
 SHA1 904d9a4f76525e2303e4b0c168c68230f223c8de t/pod_cvg.t
 SHA1 65c75abdef6f01a5d1588a307f2ddfe2333dc961 t/pod_syn.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.9 (GNU/Linux)
+Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAkx+zy4ACgkQOV9mt2VyAVG2iwCggoTEk3h/q5Nc9eL4Ds9gzAnj
-KOAAmgNLYbtTDIzjzugC5iMr0TYoMHKk
-=j6Pr
+iEYEARECAAYFAk9GlQEACgkQOV9mt2VyAVELVACfQ2iRFlcl65K0APw4g5czflG0
+gNYAn3AQI924QYPk/5ImHjJVeIj8B0nf
+=/qOA
 -----END PGP SIGNATURE-----

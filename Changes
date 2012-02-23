@@ -1,3 +1,14 @@
+version 0.004; 2012-02-23
+
+  * bugfix: require bugfixed version of Time::UTC (for requiring working
+    version of Math::BigRat)
+
+  * include META.json in distribution
+
+  * convert .cvsignore to .gitignore
+
+  * add MYMETA.json to .cvsignore
+
 version 0.003; 2010-09-01
 
   * check for required Perl version at runtime
